@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Watch Together</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Watch Together</h1>
+
+  <!-- Room Creation Buttons -->
+  <button id="createRoomYouTube">Create YouTube Room</button>
+  <button id="createRoomNetflix">Create Netflix Room</button>
+
+  <!-- Join Room Input -->
+  <input type="text" id="roomId" placeholder="Enter Room ID">
+  <button id="joinRoom">Join Room</button>
+
+  <!-- Room Info Display -->
+  <div id="roomStatus">Not connected</div>
+  <div id="userCount">Users in this room: 0</div>
+
+  <!-- Copy Link -->
+  <button id="copyRoomLink">Copy Room Link</button>
+
+  <!-- Scripts -->
+  <script src="socket.io.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

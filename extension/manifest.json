@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "Watch Together",
+    "version": "1.0",
+    "description": "Sync video playback with friends on YouTube or Netflix.",
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "https://www.youtube.com/*",
+          "https://www.netflix.com/*"
+        ],
+        "js": ["content.js"]
+      }
+    ],
+    "host_permissions": [
+      "http://localhost:4000/*",
+      "https://your-extension-url/*"
+    ]
+  }
+  
